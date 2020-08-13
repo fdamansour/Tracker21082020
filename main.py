@@ -44,15 +44,7 @@ class StopWatch(Frame):
             self._elapsedtime = time.time() - self._start    
             self._setTime(self._elapsedtime)
             self._running = 0
-    
-    def Reset(self):                                  
-        """ Reset the stopwatch. """
-        self._start = time.time()         
-        self._elapsedtime = 0.0    
-        self._setTime(self._elapsedtime)
-        
-
-        
+                
 def main():
     root = Tk()
     sw = StopWatch(root)
@@ -60,7 +52,6 @@ def main():
     
     iLoop=0
     
-    Button(root, text='Reset', command=sw.Reset).pack(side=LEFT)
     def callback(event):
         nonlocal iLoop
         print ("clicked at", event.x, event.y) 
