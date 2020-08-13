@@ -60,10 +60,7 @@ def main():
     
     iLoop=0
     
-    Button(root, text='Start', command=sw.Start).pack(side=LEFT)
-    Button(root, text='Stop', command=sw.Stop).pack(side=LEFT)
     Button(root, text='Reset', command=sw.Reset).pack(side=LEFT)
-    Button(root, text='Quit', command=root.quit).pack(side=LEFT)
     def callback(event):
         nonlocal iLoop
         print ("clicked at", event.x, event.y) 
@@ -74,6 +71,8 @@ def main():
         iLoop+=1
     
     frame = Frame(root, width=100, height=100)
+    # frame = Frame(root, width=100, height=100)
+
     frame.bind("<Button-2>", callback)
     frame.pack()
 
